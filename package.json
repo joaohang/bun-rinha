@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@types/pg": "^8.11.0",
+    "elysia": "latest",
+    "pg": "^8.11.3",
+    "sqlite": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.4",
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
