@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "extra_config": {
+      "github_com/devopsfaith/krakend/encoding": {
+          "default": "json"
+      }
+  },
+  "endpoints": [
+      {
+          "endpoint": "/",
+          "method": "GET",
+          "backend": [
+              {
+                  "host": [
+                      "http://localhost:8081",
+                      "http://localhost:8082"
+                  ]
+              }
+          ]
+      }
+  ]
+}

@@ -8,7 +8,7 @@ export const clientsController = (app: Elysia) =>
       try {
 
         const { id } = handler.params;
-
+        console.log("Chegou aqui: " + id)
         if (isNaN(id))
           return { message: 'Id precisa ser um número inteiro' }
 
@@ -27,6 +27,7 @@ export const clientsController = (app: Elysia) =>
 
       } catch (error) {
         handler.set.status = 500;
+        console.log(error)
         return {
           message: 'Unable to delete resource!',
           erroMessage: error.message,
@@ -113,6 +114,7 @@ export const clientsController = (app: Elysia) =>
         } catch (error) {
           handler.set.status = 500;
           await clientDb.query('ROLLBACK')
+          console.log(error)
           return {
             message: 'Unable to delete resource!',
             erroMessage: error.message,
@@ -158,6 +160,7 @@ export const clientsController = (app: Elysia) =>
 
         } catch (error) {
           handler.set.status = 500;
+          console.log(error)
           return {
             message: 'Unable to delete resource!',
             erroMessage: error.message,

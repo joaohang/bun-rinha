@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "endpoints": [
+    {
+      "endpoint": "/",
+      "backend": [
+        {
+          "url_pattern": "/clientes",
+          "host": [
+            "http://localhost:3001"
+          ]
+        }
+      ]
+    }
+  ]
+}
